@@ -3,13 +3,36 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/huawei/dudlsack/BoardConfigVendor.mk
 
-TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := kirin620
+# Platform
+TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH := arm
+TARGET_CPU_ABI_LIST := armeabi-v7a,armeabi
+TARGET_CPU_ABI_LIST_32_BIT := armeabi-v7a,armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a15
+TARGET_ARCH_VARIANT_CPU := cortex-a53
+TARGET_CPU_VARIANT:= cortex-a53
+ARCH_ARM_HAVE_NEON := true
+ARCH_ARM_HAVE_VFP := true
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+
+TARGET_BOARD_PLATFORM := hi6210sft
+TARGET_BOARD_PLATFORM_GPU := mali-450mp
+TARGET_BOOTLOADER_BOARD_NAME := hi6210sft
+TARGET_BOARD_PLATFORM := hi6210sft
+
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_ARCH_VARIANT_CPU := cortex-a53
+TARGET_CPU_VARIANT := cortex-a53
+TARGET_ARCH_VARIANT_FPU := neon
+#add suffix variable to uniquely identify the board
+HISI_TARGET_PRODUCT := hi6210sft
+TARGET_BOARD_SUFFIX := _32
+
 
 TARGET_BOOTLOADER_BOARD_NAME := dudlsack
 
