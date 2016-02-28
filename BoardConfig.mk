@@ -72,5 +72,5 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd_backlight0/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/bq_bci_battery.1/power_supply/Battery"
 TW_MAX_BRIGHTNESS := 255
-#TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/dudlsack/graphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/dudlsack/graphics.c
 TW_EXCLUDE_SUPERSU := true
