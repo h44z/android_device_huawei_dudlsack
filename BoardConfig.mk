@@ -3,6 +3,7 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/huawei/dudlsack/BoardConfigVendor.mk
 
+TARGET_NO_BOOTLOADER := true
 TARGET_ARCH := arm64
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := kirin620
@@ -31,3 +32,21 @@ TARGET_PREBUILT_KERNEL := device/huawei/dudlsack/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_HAS_MTP := true
+TW_ALWAYS_RMRF := true
+TW_NO_CPU_TEMP := false
+TW_NO_USB_STORAGE := true
+TARGET_USERIMAGES_USE_EXT4 := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_INTERNAL_STORAGE_PATH := "/data/share"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+BOARD_HAS_LARGE_FILESYSTEM := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd_backlight0/brightness"
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/bq_bci_battery.1/power_supply/Battery"
+TW_MAX_BRIGHTNESS := 255
+#TW_BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/dudlsack/graphics.c
+TW_EXCLUDE_SUPERSU := true
